@@ -9,7 +9,7 @@
 
 - macOS 10.15.2
 
-# Transitioning from Clover to Opencore 
+# Transitioning from Clover to Opencore (0.5.3)
 
 If you are a long time clover user like me and are interested in switching over to Opencore, then this guide is for you as I will document the steps that I took to switch over to Opencore. The good news is that if your hackintosh is done through the vanilla method and no other changes were made on the macOS side, then you should be able to delete your clover EFI folder and replace it with an opencore EFI folder. The bad news is that Opencore is much more hands on compared to Clover. 
 
@@ -17,7 +17,7 @@ From the user's perspective, Opencore makes you manage 2 additional (drivers and
 
 The first and easiest one to manage is the drivers folder. The drivers folder contains files that tell Opencore how to behave. You just drag and drop the files you need into your EFI/OC/Drivers/ folder and you're good to go. Refer to install guide on which files you need.
 
-The second one is the ACPI folder. This one is the biggest leap I had to take in switching over to Opencore as it required me to find out info about my specific motherboard, open ACPIsamples files, edit those sample files, compile and then save them into .aml files. The guide doesn't explicitly tell you where those files came from which was super confusing for me because they just magically appeared in the image following the previous: https://i.imgur.com/1Ssvqfw.png to https://i.imgur.com/HVuyghf.png 
+The second one is the ACPI folder. This one is the biggest leap I had to take in switching over to Opencore as it required me to find out info about my specific motherboard, open ACPIsamples files, edit those sample files, compile and then save them into .aml files. The guide doesn't explicitly tell you where those files came from which was super confusing for me because they just magically appeared in the image following the previous: ![here](https://i.imgur.com/1Ssvqfw.png) to ![here](https://i.imgur.com/HVuyghf.png) 
 
 Opencore also currently does not have a front end editing software like Clover configurator. Instead it uses something called ProperTree. If you're not familiar with coding in general, it might be a bit overwhelming as you will see terms like "boolean, string, data, etc" whereas in Clover configurator. But overall it's not too bad as much settings are usually just "Yes/True", and "No/False".
 
@@ -30,7 +30,9 @@ Finally, this may or may not apply to you but from AptioMemoryFix is now integra
 
 This section outlines the files you're going to need to create the EFI folder for Opencore. 
 
-OpenCorePkg - this is your bootloader. In it, you'll find files you need to make your Opencore EFI folder look like this: https://i.imgur.com/1Ssvqfw.png You'll also find ACPI samples (in .dsl form) which you will need to edit and compile into (.aml form)
+OpenCorePkg - this is your bootloader. In it, you'll find files you need to make your Opencore EFI folder look like this: 
+![this](https://i.imgur.com/1Ssvqfw.png)
+You'll also find ACPI samples (in .dsl form) which you will need to edit and compile into (.aml form)
 
 ApplesupportPkg - additional drivers for Opencore.
 
@@ -63,7 +65,7 @@ So in my case, I needed SSDT-Plug.aml and SSDT-EC.aml. Check the guide on what y
 
 At this point in the guide, there should be kexts in your kext folder, drivers in your drivers folder, and .aml files in your ACPI folder. Don't forget to put sample.plist from OpencorePKG and rename it to config.plist in to the OC folder as well. It's a good idea to start from scratch and not use the one from Clover just in case. Don't worry about the Shell.efi in the tools folder. They aren't required for Opencore to boot. 
 
-Take a moment to double check and make sure that your folder looks like the picture: https://i.imgur.com/HVuyghf.png
+Take a moment to double check and make sure that your folder looks like the picture: ![here](https://i.imgur.com/HVuyghf.png) 
 This is important because the next step (using ProperTree) is going to pull information from your OC folder and populate your config.plist accordingly. Not only that, but Opencore is set up so that there is a specific order in which it must follow to load kext in. For example, Lilu must and always will be the first kext it loads.
 
 
