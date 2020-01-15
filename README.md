@@ -9,6 +9,9 @@
 
 - macOS 10.15.2
 
+G5 case mod (no cutting...for now)
+https://imgur.com/gallery/2Pcu6Qe?s=sms
+
 # Transitioning from Clover to Opencore (0.5.3)
 
 If you are a long time clover user like me and are interested in switching over to Opencore, then this guide is for you as I will document the steps that I took to switch over to Opencore. The good news is that if your hackintosh is done through the vanilla method and no other changes were made on the macOS side, then you should be able to delete your clover EFI folder and replace it with an opencore EFI folder. The bad news is that Opencore is much more hands on compared to Clover. 
