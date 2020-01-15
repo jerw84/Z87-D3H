@@ -82,6 +82,69 @@ Download the OS version you want, use the command provided by Apple to make the 
 
 Once the installer finishes. Mount the EFI and then copy the OC EFI. If everything is working as intended, you should be greeted with the installer screen. 
 
+# Boot Troubleshooting for Opencore 0.5.3
+
+The following are some steps to make sure your system will boot or at least make it to the install screen
+
+1) Are you Intel or AMD? If Intel, proceed. If AMD, sorry...I've only done Intel systems.
+
+2) Is your computer desktop or laptop? Apologies again, I've only done desktops.
+
+3) Did you check to see if your hardware is compatible? Check here to see: https://www.reddit.com/r/hackintosh/wiki/faq#wiki_ok.21_i_fulfil_some_points.2C_what_now.3F
+
+4) Is there only one hard drive or are there multiple hard drives plugged in? It's best to install with just one hard drive plugged in and figure out multiboot later on.
+
+5) Is CFG Locked in your BIOS? Refer to here to unlock it if you don't have that option in your BIOS: https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/extras/msr-lock
+
+6) Have you tried turning on or off iGPU? Enabling XHCI and or XHCI Hand off in your BIOS? Double check the recommended BIOS settings from here: https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/#recommended-bios-settings
+
+7) In your kext folder, do you have the usual kexts? Lilu, VirtualSMC (and the plugins), Whatevergreen, USBInjectAll of their latest versions? You'll need AppleALC and an ethernet one as well but you don't need it to get to the install screen.
+
+8) In your drivers folder, do you have at minimum the following? ApfsDriverLoader.efi, VboxHfs.efi or HfsPlus.efi but not both, FwRuntimeServices.efi, and VirtualSMC.efi (if using virtualsmc.kext) of their latest versions? 
+
+9) In your ACPI folder, do you have the following? *SSDT-EC and SSDT-EC-USBX is for Catalina and on
+
+Ivy Bridge 3xxx - SSDT-EC.aml and CPU-PM.aml? Do you have SSDT-EHCx_OFF.aml in your folder if your BIOS doesn't have a EHCI-Handoff option?
+
+Haswell 4xxx - 4xxx SSDT-EC.aml and SSDT-PLUG.aml? Do you have SSDT-EHCx_OFF.aml in your folder if your BIOS doesn't have a EHCI-Handoff option?
+
+Sky Lake 6xxx - SSDT-EC-USBX.aml and SSDT-PLUG.aml?
+
+Kaby Lake 7xxx - SSDT-EC-USBX.aml and SSDT-PLUG.aml?
+
+Coffee Lake 8xxx and 9xxx - SSDT-EC-USBX.aml, SSDT-PLUG.aml, and SSDT-AWAC.aml or SSDT-RTC0 (but not both)?
+
+If you are missing any of these files, you will need to compile them using the ACPIsamples found in the Opencorepkg folder using MaciASL. 
+
+     9a) What's the name of your PNP0C09 device in your motherboard's DSDT? Is it  EC0, H_EC, PGEC or ECDV? You'll need this info for SSDT-EC.aml or SSDT-EC-USBX.aml for installing Catalina. Older versions such as Mojave and older don't need this .aml file.
+
+     9b) How is the processor referred to by your DSDT? Is it CPU0 or PR00? You'll need this info for SSDT-PLUG.aml
+
+Check this section of the guide to find out how where to look for this information https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/extras/acpi
+
+10) If you are using a 8th and 9th gen motherboard, did you check to see if you need SSDT-AWAC.aml or SSDT-RTC0? 
+https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/extras/acpi#awac-ssdt
+
+11) Did you go use ProperTree and use the Snapshot function to populate your config.plist? You need to do this each time you update your files directory in your EFI Folder.
+
+12) Did you go through all of the settings/quirks for each of the sections in your config.plist? Don't just copy someone else's config.plist or use your old config.plist from Clover.
+
+13) Did you pick a SMBIOS that closely resembles a real Mac? Pick a SMBIOS based on the processor and whether or not it has a discrete GPU. You can find this information on www.everymac.com
+    
+14) Did you try using a different version of Opencore? Sometimes using a previous version helps. Sometimes using the debug or the release version number helps.
+
+15) Do you see Opencore's boot menu? Check to make sure that the USB drive is on the top of the list for booting. For example, my motherboard will say USB Drive name - UEFI. If it just boots back into BIOS, double check your USB's folders directories.
+
+16) Did you try re-downloading the macOS installer? Maybe it's corrupt and you need to redownload it.
+
+17) Did you try using the debug version of Opencore and checking the log to see if it gives you any errors? 
+https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/troubleshooting/debug
+
+18) Did you check the other troubleshooting guide here? https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/troubleshooting/troubleshooting  
+
+19) Did you try giving Apple a call...to order yourself a real mac because I'm running out of ideas.
+
+20) ...a/s/l?
 
 
 
