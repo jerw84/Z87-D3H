@@ -10,7 +10,7 @@ Updated to Opencore 0.5.4
 
 - GTX 760 (soon to be RX 580 when my RX 5700 comes in the mail for my gaming rig)
 
-- Opencore 0.5.3
+- Opencore 0.5.4
 
 - macOS 10.15.2
 
