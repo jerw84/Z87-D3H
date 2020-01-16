@@ -1,3 +1,8 @@
+# Jan 15th Update
+Updated to Opencore 0.5.4
+- changed Keysupport = true in config.plist
+- updated bootx64.efi, opencore.efi, fwruntimeservices.efi
+
 # System Specs
 - i5 4670k 
 
