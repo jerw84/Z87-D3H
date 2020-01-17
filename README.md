@@ -142,7 +142,7 @@ https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/extras/acpi#awa
     
 14) Did you try using a different version of Opencore? Sometimes using a previous version helps. Sometimes using the debug or the release version number helps.
 
-15) Do you see Opencore's boot menu? Check to make sure that the USB drive is on the top of the list for booting. For example, my motherboard will say USB Drive name - UEFI. If it just boots back into BIOS, double check your USB's folders directories.
+15) Do you see Opencore's boot menu? Check to make sure that the USB drive is on the top of the list for booting. For example, my motherboard will say USB Drive name - UEFI. If it just boots back into BIOS, double check your USB's folders directories. Try using a USB 2.0 thumb drive and a USB 2.0 port.
 
 16) Did you try re-downloading the macOS installer? Maybe it's corrupt and you need to redownload it.
 
