@@ -1,9 +1,9 @@
-# Changelogs
+# Changelogs (January 2020)
 Updated to Opencore 0.5.4
 - changed Keysupport = true in config.plist
 - updated bootx64.efi, opencore.efi, fwruntimeservices.efi
-- added additional USB ports from USBMap
-- added Fenvi T919
+- added additional USB ports from USBMap for internal USB header (HS08) for Fenvi T919 Bluetooth support
+- added Fenvi T919 - works OOB 
 
 # System Specs
 - i5 4670k 
@@ -11,6 +11,8 @@ Updated to Opencore 0.5.4
 - Gigabyte Z87-D3H
 
 - GTX 760 (soon to be RX 580 when my RX 5700 comes in the mail for my gaming rig)
+
+- Fenvi T919
 
 - Opencore 0.5.4
 
