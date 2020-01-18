@@ -1,7 +1,8 @@
-# Jan 15th Update
+# Jan 15th & 17th Update
 Updated to Opencore 0.5.4
 - changed Keysupport = true in config.plist
 - updated bootx64.efi, opencore.efi, fwruntimeservices.efi
+- added additional USB ports from USBMap
 
 # System Specs
 - i5 4670k 
