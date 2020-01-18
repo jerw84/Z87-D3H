@@ -1,8 +1,9 @@
-# Jan 15th & 17th Update
+# Changelogs
 Updated to Opencore 0.5.4
 - changed Keysupport = true in config.plist
 - updated bootx64.efi, opencore.efi, fwruntimeservices.efi
 - added additional USB ports from USBMap
+- added Fenvi T919
 
 # System Specs
 - i5 4670k 
