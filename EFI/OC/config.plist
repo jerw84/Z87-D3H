@@ -533,7 +533,7 @@
 			<key>ShowPicker</key>
 			<true/>
 			<key>Timeout</key>
-			<integer>1</integer>
+			<integer>5</integer>
 			<key>UsePicker</key>
 			<true/>
 		</dict>
@@ -703,7 +703,7 @@
 			<string>ApfsDriverLoader.efi</string>
 			<string>FwRuntimeServices.efi</string>
 			<string>VirtualSmc.efi</string>
-			<string>VBoxHfs.efi</string>
+			<string>HFSPlus.efi</string>
 		</array>
 		<key>Input</key>
 		<dict>
@@ -752,7 +752,7 @@
 		<key>Quirks</key>
 		<dict>
 			<key>AvoidHighAlloc</key>
-			<false/>
+			<true/>
 			<key>ClearScreenOnModeSwitch</key>
 			<false/>
 			<key>ExitBootServicesDelay</key>
