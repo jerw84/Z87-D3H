@@ -18,7 +18,7 @@ Updated to Opencore 0.5.4
 
 - Opencore 0.5.4
 
-- macOS 10.15.2
+- macOS 10.15.3
 
 G5 case mod (no cutting...for now)
 https://imgur.com/a/WHy525F
