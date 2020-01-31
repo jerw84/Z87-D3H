@@ -12,7 +12,7 @@ Updated to Opencore 0.5.4
 
 - Gigabyte Z87-D3H
 
-- GTX 760 (soon to be RX 580 when my RX 5700 comes in the mail for my gaming rig)
+- GTX 760
 
 - Fenvi T919
 
