@@ -5,6 +5,7 @@ Updated to Opencore 0.5.4
 - added additional USB ports from USBMap for internal USB header (HS08) for Fenvi T919 Bluetooth support
 - added Fenvi T919 - works OOB 
 - added support for recovery mode through deletion of Vboxhfs.efi and replaced with HFSPlus.efi and changing AvoidHighAlloc to true
+- Updated USBMap and VirtualSMC Kext. Updated to macOS 10.15.3
 
 # System Specs
 - i5 4670k 
